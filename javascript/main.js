@@ -1,38 +1,30 @@
-// console.log('hello javascript');
-// console.log(console);
-
 // var, let , const
 
-// var
-// for (var i = 0; i < 10; i++) {
-//   var name = 'scalper';
-//   var engName = 'codeScalper';
-// }
+// string, Number, boolean, numm, undefined
+const name = 'tong';
+const age = 30;
+const isMale = true;
+const isFemale = false;
+let money = null;
+let girlFriend = undefined;
 
-// console.log(name, engName);
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isMale);
+console.log(typeof money);
+console.log(typeof girlFriend);
 
-// console.log(window);
+console.log(name, age, isMale);
 
-// let
-// let score = 0;
-// score = score + 1;
-// console.log(score);
+console.log('My name is ' + name + ' and i am ' + age);
+console.log(`내 이름은 ${name} 이고 나이는 ${age} 입ㅣ다.`);
 
-// const
-// const name = 'scalper';
-// name = 'codeScalper';
-// console.log(name);
+const animal = 'tiger';
 
-// 블럭 내에서 선언된 변수는 블랙 밖에서 사용이 불가능
+console.log(animal);
+console.log(animal.substring(0, 2));
+console.log(animal.substring(2, 5));
 
-// {
-//   let eng = 'scalper';
-// }
-
-// console.log(eng); // error Uncaught ReferenceError: eng is not defined
-
-// 블럭 빡에서 선언된 변수는 블랙 내에서 사용이 가능
-// let eng = 'scalper';
-// {
-//   console.log(eng);
-// }
+let fruits = '사과, 딸기, 포도, 참외';
+fruits = fruits.split(', ');
+console.log(fruits[2]);
