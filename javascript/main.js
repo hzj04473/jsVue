@@ -1,30 +1,54 @@
-// var, let , const
+// array
+const animal = 'lion';
+const animal2 = 'rabbit';
 
-// string, Number, boolean, numm, undefined
-const name = 'tong';
-const age = 30;
-const isMale = true;
-const isFemale = false;
-let money = null;
-let girlFriend = undefined;
+const animals = ['lion', 'rabbit', 'monkey', 'dog', 'cat'];
 
-console.log(typeof name);
-console.log(typeof age);
-console.log(typeof isMale);
-console.log(typeof money);
-console.log(typeof girlFriend);
+// animals[3] = 'cheeta';
+// animals.push('tiger'); // 맨 뒤에
+// animals.unshift('dog'); // 맨 앞에
+// animals.pop(); // 맨 뒤에 뺴기
 
-console.log(name, age, isMale);
+const fruits = 'apple, banana, strawberry';
 
-console.log('My name is ' + name + ' and i am ' + age);
-console.log(`내 이름은 ${name} 이고 나이는 ${age} 입ㅣ다.`);
+// console.log(Array.isArray(animals));
+// console.log(Array.isArray(fruits));
 
-const animal = 'tiger';
+console.log(animals.indexOf('monkey'));
+console.log(animals.indexOf('rabbit'));
 
-console.log(animal);
-console.log(animal.substring(0, 2));
-console.log(animal.substring(2, 5));
+// splice, slice
+// splice
+// animals.splice(animals.indexOf('monkey'), 3);
+console.log(animals);
+// slice
+const slicedAnimal = animals.slice(0, 2);
+console.log(slicedAnimal, animals);
 
-let fruits = '사과, 딸기, 포도, 참외';
-fruits = fruits.split(', ');
-console.log(fruits[2]);
+// object
+const monkey = {
+  name: 'kiki',
+  age: 5,
+  weight: 40,
+  gender: 'male',
+  iscute: true,
+  food: ['banana', 'carrot', 'potato'],
+  home: {
+    location: 'zoo',
+    size: 'big',
+    price: 3000,
+  },
+};
+
+console.log(monkey);
+
+monkey.gender = 'female';
+
+console.log(monkey['name']);
+console.log(monkey.weight);
+
+// json
+// console.log(monkey);
+const monkeyJSON = JSON.stringify(monkey); // JSON 화
+const parsedJSON = JSON.parse(monkeyJSON); // JSON 데이터를 사용해서 쓸 수 있도록 변환
+console.log(parsedJSON);
